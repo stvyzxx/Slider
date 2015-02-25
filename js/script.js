@@ -69,19 +69,19 @@
 		}
 		
 		if(options.autoPlay){			
-			timer = setInterval(autoPlayOn,options.changeImage);			
+			timer = setInterval(autoPlayOn,options.changeImage);	
+
+			// ---------------hover
+			$(this).hover(function(){
+				clearInterval(timer);	
+					
+			});
+			
+			$(this).mouseleave(function(){
+				timer = setInterval(autoPlayOn,options.changeImage);		
+					
+			});
 		}
-		
-		// ---------------hover
-		$(this).hover(function(){
-			clearInterval(timer);	
-				
-		});
-		
-		$(this).mouseleave(function(){
-			timer = setInterval(autoPlayOn,options.changeImage);		
-				
-		});
 		
 		
 		
